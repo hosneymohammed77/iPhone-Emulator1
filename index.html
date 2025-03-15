@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>محاكي iPhone</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="iphone">
+        <div class="notch"></div>
+        <div class="screen">
+            <div id="lockScreen" onclick="unlockPhone()">🔓 اضغط لفتح الهاتف</div>
+
+            <div id="homeScreen">
+                <div class="status-bar">
+                    <span>📶 LTE</span>
+                    <span>🔋 100%</span>
+                </div>
+                <div class="app" onclick="openApp('safari')">🌍 Safari</div>
+                <div class="app" onclick="openApp('settings')">⚙️ الإعدادات</div>
+                <div class="app" onclick="openApp('camera')">📷 الكاميرا</div>
+                <div class="app" onclick="openApp('phone')">📞 الهاتف</div>
+                <div class="control-center" onclick="toggleControlCenter()">🔽 مركز التحكم</div>
+            </div>
+        </div>
+
+        <div id="appWindow">
+            <button onclick="closeApp()">❌ إغلاق</button>
+            <iframe id="appFrame"></iframe>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
